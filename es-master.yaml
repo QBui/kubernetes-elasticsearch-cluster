@@ -2,6 +2,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: es-master
+  namespace: es-cluster
   labels:
     component: elasticsearch
     role: master
@@ -36,6 +37,8 @@ spec:
           value: "false"
         - name: ES_HEAP_SIZE
           value: "256m"
+        - name: NUMBER_OF_MASTERS
+          value: "2"
         ports:
         - containerPort: 9300
           name: transport

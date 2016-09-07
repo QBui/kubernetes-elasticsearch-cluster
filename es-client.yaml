@@ -2,6 +2,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: es-client
+  namespace: es-cluster
   labels:
     component: elasticsearch
     role: client
@@ -26,7 +27,7 @@ spec:
           valueFrom:
             fieldRef:
               fieldPath: metadata.namespace
-        - name: "CLUSTER_NAME"
+        - name: CLUSTER_NAME
           value: "myesdb"
         - name: NODE_MASTER
           value: "false"
