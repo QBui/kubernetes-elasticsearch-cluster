@@ -1,10 +1,10 @@
 # kubernetes-elasticsearch-cluster
 
-This is a fork of the [pires/kubernetes-elasticsearch-cluster](https://github.com/vichargrave/kubernetes-elasticsearch-cluster) that includes Kubernetes settings for all the environment variables exposed by the [pires/docker-elasticsearch-kubernetes](https://github.com/pires/docker-elasticsearch-kubernetes) image
+The Kubernetes service and deployment files in this repo, which are derived from [pires/kunernetes-elasticsearch-cluster](https://github.com/pires/kubernetes-elasticsearch-cluster), handle all the environment variables exposed by the [pires/docker-elasticsearch-kubernetes](https://github.com/pires/docker-elasticsearch-kubernetes) image. I've also added cluster start up and stop scripts to make testing easier.
 
 For instructions on how to create an Elasticsearch cluster on Kubernetes using this repo, you can read my blog: [Running Elasticsearch on Kubernetes](http://vichargrave.com/running-elasticsearch-on-kubernetes/).
 
-### Environment Variables
+## Environment Variables
 
 - [CLUSTER_NAME](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-configuration.html#cluster-name)
 - [NODE_MASTER](https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-node.html#master-node)
