@@ -15,6 +15,5 @@ For instructions on how to create an Elasticsearch cluster on Kubernetes using t
 - [NUMBER_OF_SHARDS](https://www.elastic.co/guide/en/elasticsearch/guide/current/_index_settings.html)
 - [NUMBER_OF_REPLICAS](https://www.elastic.co/guide/en/elasticsearch/guide/current/_index_settings.html)
 - [ES_HEAP_SIZE](https://www.elastic.co/guide/en/elasticsearch/guide/2.x/heap-sizing.html)
-
 - [DISCOVERY_SERVICE](https://github.com/fabric8io/elasticsearch-cloud-kubernetes#kubernetes-pod-discovery)
 - [NAMESPACE](https://github.com/fabric8io/elasticsearch-cloud-kubernetes#kubernetes-pod-discovery)
