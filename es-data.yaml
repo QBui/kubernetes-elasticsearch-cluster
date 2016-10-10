@@ -28,7 +28,7 @@ spec:
             fieldRef:
               fieldPath: metadata.namespace
         - name: "CLUSTER_NAME"
-          value: "myesdb"
+          value: "my_es_cluster"
         - name: NODE_MASTER
           value: "false"
         - name: HTTP_ENABLE
