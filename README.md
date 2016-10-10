@@ -17,3 +17,7 @@ For instructions on how to create an Elasticsearch cluster on Kubernetes using t
 - [ES_HEAP_SIZE](https://www.elastic.co/guide/en/elasticsearch/guide/2.x/heap-sizing.html)
 - [DISCOVERY_SERVICE](https://github.com/fabric8io/elasticsearch-cloud-kubernetes#kubernetes-pod-discovery)
 - [NAMESPACE](https://github.com/fabric8io/elasticsearch-cloud-kubernetes#kubernetes-pod-discovery)
+
+## Start and Stop Cluster
+
+You can start the cluster with the _start_es.sh_ and stop the clusters with _stop_es.sh_. The current start script create s client nodes, 4 data nodes, and 3 master nodes. Leave the number master nodes alone, 3 is what you want for high availability, but you can increase the number of client and data nodes as necessary.
