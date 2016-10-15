@@ -36,13 +36,16 @@ spec:
         - name: HTTP_ENABLE
           value: "false"
         - name: ES_HEAP_SIZE
-          value: "256m"
+          value: "512m"
         - name: NUMBER_OF_MASTERS
           value: "2"
         ports:
         - containerPort: 9300
           name: transport
           protocol: TCP
+        resources:
+          limits:
+            memory: 1Gi
         volumeMounts:
         - name: storage
           mountPath: /data
