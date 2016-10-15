@@ -34,7 +34,7 @@ spec:
         - name: HTTP_ENABLE
           value: "false"
         - name: ES_HEAP_SIZE
-          value: "256m"
+          value: "2g"
         - name: NUMBER_OF_SHARDS
           value: "4"
         - name: NUMBER_OF_REPLICAS
@@ -43,6 +43,9 @@ spec:
         - containerPort: 9300
           name: transport
           protocol: TCP
+        resources:
+          limits:
+            memory: 4Gi
         volumeMounts:
         - name: storage
           mountPath: /data
