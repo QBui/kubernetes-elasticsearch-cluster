@@ -4,8 +4,10 @@ echo "Creating Elasticsearch services..."
 kubectl create namespace es-cluster
 kubectl create -f es-discovery-svc.yaml
 kubectl create -f es-svc.yaml
-
 kubectl create -f es-master.yaml --validate=false
+kubectl create -f es-client.yaml --validate=false
+kubectl create -f es-data.yaml --validate=false
+
 while true; do
     active=`kubectl get deployments --namespace=es-cluster | grep es-master | awk '{print $5}'`
     if [ "$active" == "1" ]; then
@@ -14,7 +16,6 @@ while true; do
     sleep 2
 done 
 
-kubectl create -f es-client.yaml --validate=false
 while true; do
     active=`kubectl get deployments --namespace=es-cluster | grep es-client | awk '{print $5}'`
     if [ "$active" == "1" ]; then
@@ -23,7 +24,6 @@ while true; do
     sleep 2
 done
 
-kubectl create -f es-data.yaml --validate=false
 while true; do
     active=`kubectl get deployments --namespace=es-cluster | grep es-data | awk '{print $5}'`
     if [ "$active" == "1" ]; then
