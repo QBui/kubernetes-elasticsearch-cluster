@@ -34,7 +34,7 @@ spec:
         - name: HTTP_ENABLE
           value: "false"
         - name: ES_HEAP_SIZE
-          value: "2g"
+          value: "1g"
         - name: NUMBER_OF_SHARDS
           value: "4"
         - name: NUMBER_OF_REPLICAS
@@ -45,7 +45,7 @@ spec:
           protocol: TCP
         resources:
           limits:
-            memory: 4Gi
+            memory: 2Gi
         volumeMounts:
         - name: storage
           mountPath: /data
